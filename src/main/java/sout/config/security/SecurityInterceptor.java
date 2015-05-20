@@ -1,4 +1,4 @@
-package ge.gov.mia.sout.config.security;
+package sout.config.security;
 
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;

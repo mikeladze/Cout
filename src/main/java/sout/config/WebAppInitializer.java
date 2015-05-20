@@ -1,4 +1,4 @@
-package ge.gov.mia.sout.config;
+package sout.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

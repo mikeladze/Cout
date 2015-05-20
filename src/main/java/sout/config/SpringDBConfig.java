@@ -1,4 +1,4 @@
-package ge.gov.mia.sout.config;
+package sout.config;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;

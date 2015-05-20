@@ -1,6 +1,6 @@
-package ge.gov.mia.sout.config;
+package sout.config;
 
-import ge.gov.mia.sout.config.security.SecurityInterceptor;
+import sout.config.security.SecurityInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
