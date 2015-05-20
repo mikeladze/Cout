@@ -1,9 +1,9 @@
 package ge.gov.mia.sout.controller;
 
-import org.slf4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +20,7 @@ public class Controller {
 		System.out.println(request.getAttribute("remoteAddr"));
 		System.out.println("this-> " + request.getRemoteHost());
 		System.out.println("Controller !!!!!!!!!!!!");
+
 	}
 
 }
