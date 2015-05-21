@@ -1,5 +1,6 @@
 package sout.config;
 
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import sout.config.security.SecurityInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,12 +15,19 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"."})
+@ComponentScan(basePackages = {"sout.controller"})
 public class SpringMvcConfiguration extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new SecurityInterceptor());
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+
+		super.addResourceHandlers(registry);
 	}
 
 	@Bean

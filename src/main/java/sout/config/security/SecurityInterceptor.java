@@ -34,7 +34,7 @@ public class SecurityInterceptor implements HandlerInterceptor {
 	public void postHandle(javax.servlet.http.HttpServletRequest request,
 	                       javax.servlet.http.HttpServletResponse response, Object handler, ModelAndView modelAndView)
 			throws Exception {
-		System.out.println("POST HANDLER");
+//		System.out.println("POST HANDLER");
 	}
 
 	@Override
