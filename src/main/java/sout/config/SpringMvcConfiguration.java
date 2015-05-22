@@ -1,5 +1,6 @@
 package sout.config;
 
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import sout.config.security.SecurityInterceptor;
 import org.springframework.context.annotation.Bean;
@@ -30,12 +31,18 @@ public class SpringMvcConfiguration extends WebMvcConfigurerAdapter {
 		super.addResourceHandlers(registry);
 	}
 
+	@Override
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
+	}
+
 	@Bean
 	InternalResourceViewResolver internalResourceViewResolver() {
 		InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
 
-		internalResourceViewResolver.setPrefix("/views/");
+		internalResourceViewResolver.setPrefix("/WEB-INF/sout/");
 		internalResourceViewResolver.setSuffix(".jsp");
+		internalResourceViewResolver.setExposeContextBeansAsAttributes(true);
 
 		return internalResourceViewResolver;
 	}

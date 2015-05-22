@@ -12,17 +12,16 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class SecurityInterceptor implements HandlerInterceptor {
 
-
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
 		HandlerMethod handlerMethod = (HandlerMethod) handler;
 
-//		System.out.println("this-> " + request.getRequestedSessionId());
-//		System.out.println("this-> " + request.getRequestURI());
-//		System.out.println("this-> " + request.getRemotePort());
-//		System.out.println("this-> " + request.getRemoteAddr());
-//		System.out.println("this-> " + request.getRemoteHost());
+		System.out.println("this-> " + request.getRequestedSessionId());
+		System.out.println("this-> " + request.getRequestURI());
+		System.out.println("this-> " + request.getRemotePort());
+		System.out.println("this-> " + request.getRemoteAddr());
+		System.out.println("this-> " + request.getRemoteHost());
 
 		request.setAttribute("remoteAddr", request.getRemoteAddr());
 

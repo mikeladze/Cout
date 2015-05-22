@@ -14,14 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 @RestController
 public class Controller {
 
-	@RequestMapping(value = {"/a", "/s"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/asd"}, method = RequestMethod.GET)
 	public void get() {
 		System.out.println("dsadsadsadsadsadsadsadsadsadsadsadsad");
 	}
 
-	@RequestMapping(value = {"/controller", "/asd"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/view"}, method = RequestMethod.GET)
 	public ModelAndView controller(HttpServletRequest request, HttpServletResponse response) {
 
+		System.out.println("---------------------------------------------");
 		System.out.println(request.getAttribute("remoteAddr"));
 		System.out.println("this-> " + request.getRemoteHost());
 		System.out.println("Controller !!!!!!!!!!!!");
